@@ -1,11 +1,6 @@
 # Intro
 
-Valentine's art in Vim's art.
-
-# Help
-
-:he Valentine
-
+Valentine's art into Vim's art.
 
 # Installing
 
@@ -14,4 +9,8 @@ Valentine's art in Vim's art.
 :~$ cd Valentine
 
 :~$ ./install.sh
+
+# Help
+
+:he Valentine
 
