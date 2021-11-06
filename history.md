@@ -4,6 +4,7 @@
 
         v1.0.1: Nov 06, 2021    * Mistake #1.
 autoload/netrw.vim and /usr/share/vim/vim82/syntax/netrw.vim
+
 were the same file, an accidental mistake of course. 
 
 
