@@ -4,9 +4,9 @@ Valentine's art into Vim's art.
 
 # Installing
 
-:~$ tar xvz Valentine.tar.xz
+:~$ tar xvz Valentine-(version).tar.xz
 
-:~$ cd Valentine
+:~$ cd Valentine-(version)
 
 :~$ ./install.sh
 
