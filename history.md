@@ -25,5 +25,5 @@ cases.
 (see Vale-netrw_ot). \
 
 					* Improvement #1
-*.eps, *.jpg, *.htm, *.html, *.pdf, *.png, *.ps, *.svg  handling setted
+	*.eps, *.jpg, *.htm, *.html, *.pdf, *.png, *.ps, *.svg  handling setted
 
