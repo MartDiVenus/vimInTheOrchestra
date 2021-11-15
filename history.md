@@ -27,5 +27,5 @@ ________________
 	<< QuickHelp2: (actions5) ot:open term here >> not << ... term in !fd >> 
 	(see Vale-netrw_ot). 
 					* Improvement #1
-	*.eps, *.jpg, *.htm, *.html, *.pdf, *.png, *.ps, *.svg  handling set
+	*.eps, *.jpg, *.htm, *.html, *.pdf, *.png, *.ps, *.svg  handling set.
 
