@@ -24,9 +24,9 @@ ________________
 	cases.
 ________________
 
-		v1.1.4: Nov 11, 2021	* Mistake #4
+		v1.1.1: Nov 11, 2021	* Mistake #1
 	<< QuickHelp2: (actions5) ot:open term here >> not << ... term in !fd >> 
 	(see Vale-netrw_ot). 
 					* Improvement #1
-	*.eps, *.jpg, *.htm, *.html, *.pdf, *.png, *.ps, *.svg  handling setted
+	*.eps, *.jpg, *.htm, *.html, *.pdf, *.png, *.ps, *.svg  handling set
 
