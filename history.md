@@ -82,6 +82,6 @@ another its window>> added.
 
 
 				* improvement #6
-<WINDOWS OWNERS>>      *Vale-netrw_windows_owners*
+<<WINDOWS OWNERS>>      *Vale-netrw_windows_owners*
 added.
 				
