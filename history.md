@@ -92,7 +92,7 @@ _______________
 
 				* Improvement #1
 Temporary files and dirs:
-Now all Vale-netrw split folder are located  only  in /tmp dir  and they have 
+Now all Vale-netrw split folders are located  only  in /tmp dir  and they have 
 the prefix <<valeNetrw->>.
 Now all temporary Vale-netrw files have the prefix <<valeNetrw->>.
 
