@@ -142,3 +142,13 @@ NetrwRecover1.sh .
 I missed some important files of /etc/vim .
 
 
+_______________
+
+	v2.1.0 Mar 2, 2022
+
+				* Improvement #1
+Improved Vale-disks help.
+
+				* Improvement #2
+Improved ValeDisks stdout last message.
+		
