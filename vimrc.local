@@ -1,0 +1,26 @@
+" Mario Fantini's gvim configuration file.
+
+set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim82,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+
+set nocompatible
+ 
+set ruler
+
+set number
+
+set history=15
+
+
+colorscheme hexmart
+
+syntax enable
+
+syntax on
+
+runtime! syntax/hexmart.vim
+
+" To open, by hexmart.vim, *.hex files - those having exadecimal clear text and to compi-
+" le -.   However, for beginners, *.txt files are directly affected by hexmart configura-
+" tion too. 
+autocmd BufNewFile,BufRead *.hex set ft=hexmart
+
