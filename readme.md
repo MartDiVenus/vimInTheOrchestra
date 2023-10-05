@@ -1,16 +1,3 @@
 # Intro
-
-Valentine's art into Vim's art.
-
-# Installing
-
-:~$ tar xvz Valentine-(version).tar.xz
-
-:~$ cd Valentine-(version)
-
-:~$ ./install.sh
-
-# Help
-
-:he Valentine
-
+https://github.com/MartDiVenus/VIM/tree/Valentine.vim
+https://github.com/MartDiVenus/VIM/tree/hexadecimal-Vim-writing
