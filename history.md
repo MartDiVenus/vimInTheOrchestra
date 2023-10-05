@@ -212,8 +212,5 @@ Paragraph settings improved.
 				* Improvement #4
 reconfigure.sh added.
 
-Now,  to  install  Valentine package,  you  don't need  to  install  vimplug,
-ctags, tagbar again; you have to execute reconfigure.sh only.
-
-! vimplug, ctags, tagbar are not my products obviously.
-
+Now,  to  install  Valentine package,  you  don't need  to  install  ctags
+again.
