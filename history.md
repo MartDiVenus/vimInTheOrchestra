@@ -212,5 +212,26 @@ Paragraph settings improved.
 				* Improvement #4
 reconfigure.sh added.
 
-Now,  to  install  Valentine package,  you  don't need  to  install  ctags
-again.
+Now,  to  install  Valentine package,  you  don't need  to  install  vimplug,
+ctags, tagbar again; you have to execute reconfigure.sh only.
+
+! vimplug, ctags, tagbar are not my products obviously.
+
+
+_______________
+	
+	v3.5.0  Feb 04, 2024
+
+				* Correction #1
+Valedisks, Umount parts: Restored original netrw [mu]. 
+Corrected in Valentine.vim the title of past Valedisks [mu], and [mu] changed
+with [mn].
+
+				* Correction #2
+ValeNetrw: Bookmarks editing corrected.
+
+				* Improvement #1
+ValeNetrw: Given priority to chromium as regard as XML files rendering.
+
+				* Improvement #2
+Valedisks: Stdout and stderr, improved.
