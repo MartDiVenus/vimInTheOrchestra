@@ -1,0 +1,76 @@
+#!/bin/bash
+
+
+## Il fileTarget è scritto da vale-netrw con [mf][fm]
+#fileTarget="$(cat /tmp/valeNetrw-SMarked)"
+
+rm -fr /tmp/bmValeNetrwSplit
+
+mkdir /tmp/bmValeNetrwSplit
+
+rm -f /tmp/mlsOutput
+
+touch /tmp/mlsOutput
+
+
+split -l1 /tmp/valeNetrw-SMarked /tmp/bmValeNetrwSplit/
+
+for a in $(ls /tmp/bmValeNetrwSplit)
+
+do
+	leggoA="$(cat /tmp/bmValeNetrwSplit/$a)"
+
+	ls -l $leggoA >> /tmp/mlsOutput
+
+done
+
+
+rm -r /tmp/bmValeNetrwSplit/
+
+
+clear
+
+echo " "
+echo " "
+echo " "
+
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+### Avviso valido solo per l'eseczione da terminale o da script *.sh
+echo "Leggi /tmp/mlsOutput"
+
+
+
+
+
+### Avviso valido anche se mls avviato da Vale-netrw
+## Se mls avviato da [bm] di Vale-netrw
+cp /tmp/mlsOutput /tmp/valeNetrw-BmOutput
+
+
+exit
+
+
