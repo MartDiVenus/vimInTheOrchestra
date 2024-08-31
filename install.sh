@@ -85,7 +85,7 @@ sudo chown -R $USER:$USER  ~/.vim
 sudo chmod -R uga+xrw ~/.vim
 
 
-sudo cp homePart/.vim/vimfiles/Valentine/netrw/bash/properm /usr/local/bin
+sudo cp homePart/vim/vimfiles/Valentine/netrw/bash/properm /usr/local/bin
 
 sync
 
@@ -115,7 +115,7 @@ sudo chmod uga+r /usr/share/vim/vim82/autoload/netrwFileHandlers.vim
 
 
 ### forked syntax/netrw.vim
-sudo cp homePart/.vim/vimfiles/Valentine/netrw/syntax/netrw.vim.file /usr/share/vim/vim82/syntax/netrw.vim
+sudo cp homePart/vim/vimfiles/Valentine/netrw/syntax/netrw.vim.file /usr/share/vim/vim82/syntax/netrw.vim
 
 sudo chown root:root /usr/share/vim/vim82/syntax/netrw.vim
 
@@ -125,7 +125,7 @@ sudo chmod uga+r /usr/share/vim/vim82/syntax/netrw.vim
 
 
 ### forked syntax/mart.vim
-sudo cp homePart/.vim/vimfiles/Valentine/netrw/syntax/mart.vim /usr/share/vim/vim82/syntax
+sudo cp homePart/vim/vimfiles/Valentine/netrw/syntax/mart.vim /usr/share/vim/vim82/syntax
 
 sudo chown root:root /usr/share/vim/vim82/syntax/mart.vim
 
@@ -135,7 +135,7 @@ sudo chmod uga+r /usr/share/vim/vim82/syntax/mart.vim
 
 
 
-sudo cp -r homePart/.vim/vimfiles/Valentine/netrw/syntax /usr/local/share/valentine/fileManager
+sudo cp -r homePart/vim/vimfiles/Valentine/netrw/syntax /usr/local/share/valentine/fileManager
 
 
 ### colors/mart.vim
