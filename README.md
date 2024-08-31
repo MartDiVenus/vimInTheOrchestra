@@ -28,5 +28,5 @@ Make your /etc/vim/vimrc.local and /etc/vim/gvimrc.local like mine.
 # Colours test
 :e /usr/share/vim/vim82/colors/hexmart.vim | :so /usr/share/vim/vim82/colors/tools/check_colors.vim
 
-The missing colour references are not a problem for me.
+Missing colour references are not a problem for me.
 
