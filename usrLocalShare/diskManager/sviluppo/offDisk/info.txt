@@ -1,0 +1,8 @@
+non so se a causa dell'assegnazione statica dei dischi, 
+o di altro: lo spegnimento dei dischi non è stabile;
+mi spegne sempre il disco collegato all'usb del pc
+e non quello all'hub. Nonostante i codici di tutti
+e tre i modi sono corretti.
+
+Il IV modo dovrebbe essere il più elegante, tuttavia
+devo trovare un'alternativa a udiskctl.
