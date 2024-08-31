@@ -235,3 +235,12 @@ ValeNetrw: Given priority to chromium as regard as XML files rendering.
 
 				* Improvement #2
 Valedisks: Stdout and stderr, improved.
+
+
+_______________
+	
+	v4.0.0  Aug 31, 2024
+
+Various improvements and corrections; new features in ValeParted.
+
+	
