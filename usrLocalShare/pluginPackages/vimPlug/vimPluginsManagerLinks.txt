@@ -1,0 +1,3 @@
+https://github.com/VundleVim/Vundle.vim
+https://github.com/junegunn/vim-plug
+vim-plug è più essenziale

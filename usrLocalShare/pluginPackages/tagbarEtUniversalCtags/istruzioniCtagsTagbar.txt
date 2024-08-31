@@ -1,0 +1,124 @@
+
+§1 ctags [dipendenza per tagbar]
+
+*1.1 
+Download
+git clone https://github.com/universal-ctags/ctags.git
+
+*1.2 Installazione
+cd ctags-master
+
+./autogen.sh
+
+### ./configure --prefix=/where/you/want # defaults to /usr/local
+## eseguendo solo ./configure non me li ha installati in /usr/local
+## me li ha installati nel binario /usr/local/bin/ctags
+## sudo find / -name ctags
+# /usr/local/bin/ctags
+## ma non ho avuto problemi
+./configure
+
+make
+
+
+#make install # may require extra privileges depending on where to install
+sudo make install 
+
+
+
+§2 tagbar 
+
+
+*2.1 Senza il gestore/installer vim-plug
+### installazione alternativa a git clone eseguita in ~/.vim
+## installazione alternativa a vimball
+## attenzione perché la cartella .github è necessario che si trovi in~/.vim,
+## anche il file .vintrc.yaml è necessario che si trovi in ~/.vim
+
+alearchiver -u -d. tagbar-master.zip
+
+cd tagbar-master
+
+## obbligatorio in  ~/.vim/autoload
+cp -r autoload/* ~/.vim/autoload
+
+cp plugin/* ~/.vim/plugin
+
+mkdir ~/.vim/syntax 2> /dev/null
+
+cp syntax/* ~/.vim/syntax
+
+cp doc/* ~/.vim/doc
+
+### e devi aggiornare il tag dell'help
+vim -c ':helptags ~/.vim/doc' -c :q
+
+
+
+
+
+*2.2 Ibrido: con il gestore/installer vim-plug ma offline
+
+alearchiver -u -d. tagbar-master.zip
+
+cd tagbar-master
+
+## obbligatorio in  ~/.vim/autoload
+cp -r autoload/* ~/.vim/autoload
+
+mkdir -p ~/.vim/plugged/tagbar
+
+cp -r plugin ~/.vim/plugged/tagbar
+
+cp -r syntax ~/.vim/plugged/tagbar
+
+cp doc/* ~/.vim/plugged/tagbar/doc
+
+
+
+
+*2.3 Con il gestore/installer vim-plug, online
+
+° I modo
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/tagbar'
+...
+call plug#end()
+
+°° I modo a)
+:PlugInstall tagbar
+
+°° I modo b) automaticamente magari da script
+vim -c ":PlugInstall tagbar"
+e alla fine dovrai digitare due volte <:q> <:q>
+
+## obbligatorio in  ~/.vim/autoload
+cp -r ~/.vim/plugged/tagbar/autoload/* ~/.vim/autoload
+
+
+
+* II modo
+o in Valentine.vim devi avere
+call plug#begin('~/.vim/plugged')
+...
+Plug 'preservim/tagbar', { 'on': 'TagbarOpen', 'do': 'cp -r autoload/* ~/.vim/autoload' }
+..
+call plug#end()
+
+°° II modo a)
+:PlugInstall tagbar
+
+°° II modo b) automaticamente magari da script
+vim -c ":PlugInstall tagbar"
+e alla fine dovrai digitare due volte <:q> <:q>
+
+
+
+* 3 Uso
+
+Invocare tagbar con 
+:TagbarOpen
+
+Chiudere la finestra digitando <q>.
+
+

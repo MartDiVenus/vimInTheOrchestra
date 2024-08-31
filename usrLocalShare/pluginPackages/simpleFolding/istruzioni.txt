@@ -1,0 +1,26 @@
+alearchiver -u -d/home/$USER/.vim/plugged -fvim-tex-fold-master.vim
+
+in Valentine.vim devi avere:
+" Plugins Loading: {{{1
+runtime! plugin/Valentine/ValentineRuntime.vim
+
+"" vim-plug section: plugins handler
+call plug#begin('~/.vim/plugged')
+"
+Plug 'preservim/vim-tex-fold'
+"
+call plug#end()
+
+e.g. complwto con altri plugin:
+
+"" vim-plug section: plugins handler
+call plug#begin('~/.vim/plugged')
+"
+Plug 'preservim/tagbar', { 'on': 'TagbarOpen', 'do': 'cp -r autoload/* ~/.vim/autoload' }
+"
+Plug 'preservim/vim-tex-fold'
+"
+call plug#end()
+
+
+

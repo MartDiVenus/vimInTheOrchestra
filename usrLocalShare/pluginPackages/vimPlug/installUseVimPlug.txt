@@ -1,0 +1,46 @@
+cp vim-plug-master/plug.vim ~/.vim/autoload
+cp vim-plug-master/doc ~/.vim/doc
+vim -c ':helptags ~/.vim/doc' -c :q
+
+mkdir ~/.vim/plugged
+
+Aggiorna Valentine.vim come ho fatto io.
+<<
+call plug#begin('~/.vim/plugged')
+"
+""" tagbar
+"" tagbar ha bisogno di un passaggio manuale, ossia copiare il contenuto
+" di autoload/* in ~/.vim/autoload
+" quindi prima specifico la variabile globale g:tagbar_install
+" e poi eseguo la modifica manuale automaticamente <cp -r ...>
+" let g:tagbar_install = 'cp -r autoload/* ~/.vim/autoload'
+" Una volta installato lo invoco con <'on': 'TagbarOpen' }> senza appesantire 
+" inutilmente il sistema.
+"Plug 'preservim/tagbar', { 'do': g:tagbar_install, 'on': 'TagbarOpen' }
+" ma per non appesantire il sistema con una variabile in più, esprimo direttamente l'istanza
+Plug 'preservim/tagbar', { 'on': 'TagbarOpen', 'do': 'cp -r autoload/* ~/.vim/autoload' }
+"
+" JavaBrowser, alternativa a tagbar
+" Plug 'vim-scripts/JavaBrowser', { 'on': 'JavaBrowser' }
+"
+" Il resto lo trovi su README.md e sul tutorial ufficiali
+call plug#end()
+>>
+
+#### installazione plugin
+
+Prima si specificano in Valentine.vim come ho fatto io,
+anche senza avere nulla in ~/.vim/plugged;
+poi si installano con
+
+° uno alla volta
+e.g.
+:PlugInstall JavaBroser
+
+* tutti in un colpo
+:PlugInstall
+
+* da commandline
+
+vim -c ":PlugInstall JavaBrowser"
+e alla fine dovrai digitare due volte <:q> <:q>
