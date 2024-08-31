@@ -1020,9 +1020,9 @@ Valedisks: Stdout and stderr, improved.
 
 _______________
 	
-	v3.6.0  Aug 31, 2024
+	v4.0.0  Aug 31, 2024
 
-Various improvements and corrections.
+Various improvements and corrections; new features in ValeParted.
 
 =============================================================================
 8. Todo					*Vale-todo* {{{1
