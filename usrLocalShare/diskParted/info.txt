@@ -1,2 +1,0 @@
-partScript è per ambienti privi di sessione grafica,
-valeparted è per ambienti aventi sessione grafica.
