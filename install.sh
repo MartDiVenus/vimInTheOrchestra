@@ -181,9 +181,11 @@ sudo chmod o-xrw /usr/local/bin/valedisks
 sudo chmod uga+xr /usr/local/bin/valedisks
 
 
-cp -r homePart/vim ~/
+cp -r homePart/vim/* ~/.vim
 
-sudo cp -r homePart/vim /root
+sudo mkdir /root/.vim
+
+sudo cp -r homePart/vim/* /root/.vim
 
 
 ########## partizionatore (ValeParted)
@@ -199,9 +201,9 @@ sudo chmod o-xrw /usr/local/bin/valeparted
 sudo chmod uga+xr /usr/local/bin/valeparted
 
 
-cp -r homePart/vim ~/
+cp -r homePart/vim/* ~/.vim
 
-sudo cp -r homePart/vim /root
+sudo cp -r homePart/vim/* /root/.vim
 
 
 
