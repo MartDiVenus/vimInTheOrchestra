@@ -203,10 +203,6 @@ sudo chmod uga+xr /usr/local/bin/valeparted
 
 cp -r homePart/vim/* ~/.vim
 
-sudo cp -r homePart/vim/* /root/.vim
-
-
-
 
 
 ########## Impostazioni di default
