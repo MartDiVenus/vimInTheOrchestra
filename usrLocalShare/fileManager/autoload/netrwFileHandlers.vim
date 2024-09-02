@@ -221,24 +221,6 @@ fun! s:NFH_jpeg(jpegfile)
 "  call Dret("s:NFH_jpeg 1")
   return 1
 endfun
-" -------------------------------- JPG
-" s:NFH_jpeg: visualize jpeg files {{{1
-fun! s:NFH_jpeg(jpegfile)
-"  call Dfunc("s:NFH_jpeg(jpegfile<".a:jpegfile.">)")
-"
-" Meglio ristretto per la sola visualizzazione, è più veloce.
-  if executable("ristretto")
-   exe "!ristretto".shellescape(a:jpegfile,1)
-  elseif executable("gimp")
-   exe "silent! gimp -s ".shellescape(a:jpegfile,1)
-  else
-"   call Dret("s:NFH_jpeg 0")
-   return 0
-  endif
-
-"  call Dret("s:NFH_jpeg 1")
-  return 1
-endfun
 " -------------------------------- JPEG
 " s:NFH_JPEG: visualize JPEG files {{{1
 fun! s:NFH_JPEG(JPEGfile)
