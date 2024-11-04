@@ -243,4 +243,11 @@ _______________
 
 Various improvements and corrections; new features in ValeParted.
 
+
+_______________
+	
+	v4.0.1  Nov 04, 2024
+
+usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
+
 	
