@@ -109,6 +109,10 @@ then
 
 /usr/local/share/valentine/diskParted/bash/Get/f-sc.sh
 
+exit
+
+break
+
 else
 
 
