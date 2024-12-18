@@ -1,7 +1,7 @@
 " Vim syntax file
 " Title: Hexadecimal writing syntax
 " Version: 1.0.0 
-" Author: Mario Fantini <marfant7@gmail.com>
+" Author: Mario Fantini <ing.mariofantini@gmail.com>
 " Date: 2021/11/25
 " Name: hexmart.vim 
 " Vim version: 2:8.2.2434-3 (82)
