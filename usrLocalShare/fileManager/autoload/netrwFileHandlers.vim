@@ -1,6 +1,7 @@
 " netrwFileHandlers: contains various extension-based file handlers for
 "                    netrw's browsers' x command ("eXecute launcher")
-" Author:	Charles E. Campbell
+" Author:	Charles E. Campbell, forked by Mario Fantini
+"               (ing.mariofantini@gmail.com)
 " Date:		Sep 18, 2020
 " Version:	11
 " Copyright:    Copyright (C) 1999-2012 Charles E. Campbell {{{1
@@ -77,12 +78,12 @@ fun! s:NFH_md(pagefile)
 
   let page= substitute(a:pagefile,'^','file://','')
 
-  if executable("chromium")
+  if executable("/usr/local/bin/rmd")
+"   call Decho("executing mio eseguibile rmd ".page)
+   exe "!/usr/local/bin/rmd ".shellescape(page,1)
+  elseif executable("chromium")
 "   call Decho("executing !chromium ".page)
    exe "!chromium ".shellescape(page,1)
-  elseif executable("google-chrome")
-"   call Decho("executing !google-chrome ".page)
-   exe "!google-chrome ".shellescape(page,1)
   else
 "   call Dret("s:NFH_md 0")
    return 0
@@ -101,9 +102,9 @@ fun! s:NFH_html(pagefile)
 
   let page= substitute(a:pagefile,'^','file://','')
 
-  if executable("firefox")
-"   call Decho("executing !firefox ".page)
-   exe "!firefox ".shellescape(page,1)
+  if executable("/usr/local/bin/rhtml")
+"   call Decho("executing !rhtml ".page)
+   exe "!/usr/local/bin/rhtml ".shellescape(page,1)
   elseif executable("chromium")
 "   call Decho("executing !chromium ".page)
    exe "!chromium ".shellescape(page,1)
@@ -123,11 +124,11 @@ fun! s:NFH_xml(pagefile)
 
   let page= substitute(a:pagefile,'^','file://','')
 
-  if executable("chromium")
-"   call Decho("executing !firefox ".page)
-   exe "!chromium ".shellescape(page,1)
+  if executable("/usr/local/bin/rxml")
+"   call Decho("executing !/usr/local/bin/rxml ".page)
+   exe "!/usr/local/bin/rxml ".shellescape(page,1)
   elseif executable("firefox")
-"   call Decho("executing !chromium ".page)
+"   call Decho("executing !firefox ".page)
    exe "!firefox ".shellescape(page,1)
   else
 "   call Dret("s:NFH_xml 0")
@@ -135,28 +136,6 @@ fun! s:NFH_xml(pagefile)
   endif
 
 "  call Dret("s:NFH_xml 1")
-  return 1
-endfun
-"---------------------------------- md
-" s:NFH_md: handles md when the user hits "x" when the {{{1
-"                        cursor is atop a *.md file
-fun! s:NFH_md(pagefile)
-"  call Dfunc("s:NFH_md(".a:pagefile.")")
-
-  let page= substitute(a:pagefile,'^','file://','')
-
-  if executable("chromium")
-"   call Decho("executing !chromium ".page)
-   exe "!chromium ".shellescape(page,1)
-  elseif executable("google-chrome")
-"   call Decho("executing !google-chrome ".page)
-   exe "!google-chrome ".shellescape(page,1)
-  else
-"   call Dret("s:NFH_md 0")
-   return 0
-  endif
-
-"  call Dret("s:NFH_md 1")
   return 1
 endfun
 " ---------------------------------------------------------------------
@@ -394,8 +373,8 @@ if executable("/usr/local/bin/mupdfg")
    "exe 'silent! !okular '.shellescape(a:pdf,1)
 "  elseif executable("pdftotext")
 "   exe 'silent! pdftotext -nopgbrk '.shellescape(a:pdf,1)
-  elseif executable("okular")
-   exe 'silent! !okular '.shellescape(a:pdf,1)
+  elseif executable("/usr/local/bin/rpdf")
+   exe 'silent! !/usr/local/bin/rpdf'.shellescape(a:pdf,1)
  else
 "  call Dret("s:NFH_pdf 0")
    return 0

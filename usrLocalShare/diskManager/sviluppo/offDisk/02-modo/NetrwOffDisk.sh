@@ -3,7 +3,7 @@
 ## Intro: Bash script about disks turning off {{{1
 ##          It's called by NetrwOffDisk.vim .
 ## Title: NetrwOffDisk.sh {{{1
-## Author: Mario Fantini marfant7@gmail.com https://github.com/MartDiVenus/ {{{1
+## Author: Mario Fantini ing.mariofantini@gmail.com https://github.com/MartDiVenus/ {{{1
 ## Copyright (C) 2022.02.26 {{{1 
 ## Creative Commons by-nc-sa-eu
 ## https://martlux.ns0.it:4000/cluster/writing/vim

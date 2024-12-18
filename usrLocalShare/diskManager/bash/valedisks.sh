@@ -4,7 +4,7 @@
 ## Intro: Bash script about netrw based Disk Manager. {{{1
 ## /usr/local/bin/valedisks
 ## Title: valedisk.sh {{{1
-## Author: Mario Fantini marfant7@gmail.com {{{1
+## Author: Mario Fantini ing.mariofantini@gmail.com {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
 ## Creative Commons by-nc-sa-eu

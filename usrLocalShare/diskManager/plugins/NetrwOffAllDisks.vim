@@ -5,7 +5,7 @@
 " Name: NetrwOffAllDisks.vim 
 " Help: :he Vale-netrw_ba
 " Last Change:	2022 Feb 26
-" Author: Mario Fantini "MartDiVenus" <marfant7@gmail.com> 
+" Author: Mario Fantini "MartDiVenus" <ing.mariofantini@gmail.com> 
 "         https://github.com/MartDiVenus/
 " Copyright: Mario Fantini's copyright: Creative Commons by-nc-sa-eu.
 "            Bram Moolenaar's  copyright  applies  to all  Mario Fantini's  vim

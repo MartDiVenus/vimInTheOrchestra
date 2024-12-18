@@ -1,6 +1,6 @@
 " Vim syntax
 "
-" Maintainer: Mario Fantini "MartDiVenus" marfant7@gmail.com 
+" Maintainer: Mario Fantini "MartDiVenus" ing.mariofantini@gmail.com 
 "             https://github.com/MartDiVenus/ 
 " Name: mart.vim
 " Version: 1.0.0 
