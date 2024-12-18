@@ -1,10 +1,9 @@
 " Vim colours
 " Title: Hexadecimal writing colours
 " Version: 1.0.0 
-" Author: Mario Fantini <marfant7@gmail.com>
-" url: https://github.com/MartDiVenus/hexadecimal-Vim-Writing/tree/main
+" Author: Mario Fantini <ing.mariofantini@gmail.com>
 " Date: 2021/10/15
-" Name: hexmartColors.vim 
+" Name: hexmart.vim 
 " Vim version: 2:8.2.2434-3 (82)
 " OS: Debian 11
 
@@ -14,7 +13,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name="hexmartColors"
+let g:colors_name="hexmart"
 
 
 
@@ -68,7 +67,7 @@ hi symbolsScience				guifg=#7FFFD4					ctermfg=lightBlue
 hi symbolsQuotes				guifg=lightGreen				ctermfg=lightGreen
 hi symbolsList			guibg=grey50	guifg=white					ctermfg=7
 hi symbolsSpecial				guifg=lightCyan					ctermfg=lightCyan
-hi greekLower					guifg=khaki	 				ctermfg=3
-hi greekCapital					guifg=brown					ctermfg=1
+hi sreekLower					guifg=khaki	 				ctermfg=3
+hi sreekCapital					guifg=brown					ctermfg=1
 
 "vim: sw=8
