@@ -1,6 +1,6 @@
 " Language   : Netrw Listing Syntax
 " Maintainer : Charles E. Campbell
-" Brushstrokes : Mario Fantini "MartDiVenus" marfant7@gmail.com 
+" Brushstrokes : Mario Fantini "MartDiVenus" ing.mariofantini@gmail.com 
 "                https://github.com/MartDiVenus/ 
 " Last change: Nov 07, 2019
 " Version    : 20

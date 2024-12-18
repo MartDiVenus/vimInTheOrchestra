@@ -3,7 +3,7 @@
 " Name: NetrwSelectAllMarkedSource.vim 
 " Help: :he Vale-netrw_fa
 " Last Change:	2021 november 27
-" Author: Mario Fantini "MartDiVenus" <marfant7@gmail.com> 
+" Author: Mario Fantini "MartDiVenus" <ing.mariofantini@gmail.com> 
 "         https://github.com/MartDiVenus/
 " Copyright: Mario Fantini's copyright: Creative Commons by-nc-sa-eu.
 "            Bram Moolenaar's  copyright  applies  to all  Mario Fantini's  vim

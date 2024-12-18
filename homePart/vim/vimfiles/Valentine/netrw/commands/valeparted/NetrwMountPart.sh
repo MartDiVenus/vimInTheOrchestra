@@ -3,7 +3,7 @@
 ## Intro: Bash script about partitions mounting {{{1
 ##          It's called by NetrwMountPart.vim .
 ## Title: NetrwMountPart.sh {{{1
-## Author: Mario Fantini marfant7@gmail.com https://github.com/MartDiVenus/ {{{1
+## Author: Mario Fantini ing.mariofantini@gmail.com https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2022.02.26 {{{1 
 ## Creative Commons by-nc-sa-eu

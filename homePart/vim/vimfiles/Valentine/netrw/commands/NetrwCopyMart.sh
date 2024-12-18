@@ -2,7 +2,7 @@
 
 ## Intro: Bash script about files/dirs netrw copying.
 ## Title: NetrwCopyMart.sh {{{1
-## Author: Mario Fantini marfant7@gmail.com https://github.com/MartDiVenus/ {{{1
+## Author: Mario Fantini ing.mariofantini@gmail.com https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2021.10.15 {{{1 
 # Creative Commons by-nc-sa-eu

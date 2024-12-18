@@ -3,7 +3,7 @@
 ## Intro: Bash script about inverse selection for fm*. {{{1
 ##          It's called by NetrwInverseMarkedSource.vim .
 ## Title: inverseMarkedSource.sh {{{1
-## Author: Mario Fantini marfant7@gmail.com https://github.com/MartDiVenus/ {{{1
+## Author: Mario Fantini ing.mariofantini@gmail.com https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2021.10.15 {{{1 
 ## Creative Commons by-nc-sa-eu

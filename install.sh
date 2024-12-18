@@ -5,7 +5,7 @@
 ##        I could share martalux with Vim's and other élite of administrators,
 ##        I don't share it with any user.
 ## Title: install.sh {{{1
-## Author: Mario Fantini "MartDiVenus" marfant7@gmail.com 
+## Author: Mario Fantini "MartDiVenus" ing.mariofantini@gmail.com 
 ## https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
@@ -54,13 +54,13 @@ sudo chown -R $curuser:$curuser /var/local/netrw
 sudo chmod -R uga+xrw /var/local/netrw
 
 
-sudo rm -fr ~/.vim
+sudo rm -fr /home/$curuser/.vim
 
 sudo rm -fr /root/.vim
 
 sudo rm -fr /etc/vim
 
-sudo rm -f ~/.vimrc
+sudo rm -f /home/$curuser/.vimrc
 
 sudo rm -f /root/.vimrc
 
@@ -76,62 +76,58 @@ sudo chmod ugao-xrw /etc/vim/* 2> /dev/null
 sudo chmod uga+r /etc/vim/* 2> /dev/null
 sudo chmod u+w /etc/vim/* 2> /dev/null
 
-sync
 
-sudo mkdir -p ~/.vim/autoload
-
-sudo chown -R $USER:$USER  ~/.vim
-
-sudo chmod -R uga+xrw ~/.vim
-
+sudo mkdir -p /home/$curuser/.vim/autoload
 
 sudo cp homePart/vim/vimfiles/Valentine/netrw/bash/properm /usr/local/bin
 
-sync
-
 sudo chmod uga+xr /usr/local/bin/properm
+
+### bookmarks
+sudo cp homePart/vim/.netrwbook /home/$curuser/.vim
+
 
 
 ### forked netrw.vim
-sudo cp /usr/local/share/valentine/fileManager/autoload/netrw.vim.file /usr/share/vim/vim82/autoload/netrw.vim
+sudo cp /usr/local/share/valentine/fileManager/autoload/netrw.vim.file /usr/share/vim/vim90/autoload/netrw.vim
 
-sudo chown root:root /usr/share/vim/vim82/autoload/netrw.vim
+sudo chown root:root /usr/share/vim/vim90/autoload/netrw.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/autoload/netrw.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/autoload/netrw.vim
 
-sudo chmod uga+r /usr/share/vim/vim82/autoload/netrw.vim
+sudo chmod uga+r /usr/share/vim/vim90/autoload/netrw.vim
 
 
 ### forked autoload/netrwFileHandlers.vim
-sudo cp /usr/local/share/valentine/fileManager/autoload/netrwFileHandlers.vim /usr/share/vim/vim82/autoload
+sudo cp /usr/local/share/valentine/fileManager/autoload/netrwFileHandlers.vim /usr/share/vim/vim90/autoload
 
-sudo chown root:root /usr/share/vim/vim82/autoload/netrwFileHandlers.vim
+sudo chown root:root /usr/share/vim/vim90/autoload/netrwFileHandlers.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/autoload/netrwFileHandlers.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/autoload/netrwFileHandlers.vim
 
-sudo chmod uga+r /usr/share/vim/vim82/autoload/netrwFileHandlers.vim
+sudo chmod uga+r /usr/share/vim/vim90/autoload/netrwFileHandlers.vim
 
 
 
 
 ### forked syntax/netrw.vim
-sudo cp homePart/vim/vimfiles/Valentine/netrw/syntax/netrw.vim.file /usr/share/vim/vim82/syntax/netrw.vim
+sudo cp homePart/vim/vimfiles/Valentine/netrw/syntax/netrw.vim.file /usr/share/vim/vim90/syntax/netrw.vim
 
-sudo chown root:root /usr/share/vim/vim82/syntax/netrw.vim
+sudo chown root:root /usr/share/vim/vim90/syntax/netrw.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/syntax/netrw.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/syntax/netrw.vim
 
-sudo chmod uga+r /usr/share/vim/vim82/syntax/netrw.vim
+sudo chmod uga+r /usr/share/vim/vim90/syntax/netrw.vim
 
 
 ### forked syntax/mart.vim
-sudo cp homePart/vim/vimfiles/Valentine/netrw/syntax/mart.vim /usr/share/vim/vim82/syntax
+sudo cp homePart/vim/vimfiles/Valentine/netrw/syntax/mart.vim /usr/share/vim/vim90/syntax
 
-sudo chown root:root /usr/share/vim/vim82/syntax/mart.vim
+sudo chown root:root /usr/share/vim/vim90/syntax/mart.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/syntax/mart.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/syntax/mart.vim
 
-sudo chmod uga+r /usr/share/vim/vim82/syntax/mart.vim
+sudo chmod uga+r /usr/share/vim/vim90/syntax/mart.vim
 
 
 
@@ -139,33 +135,33 @@ sudo cp -r homePart/vim/vimfiles/Valentine/netrw/syntax /usr/local/share/valenti
 
 
 ### colors/mart.vim
-sudo cp /usr/local/share/valentine/fileManager/colors/mart.vim /usr/share/vim/vim82/colors
+sudo cp /usr/local/share/valentine/fileManager/colors/mart.vim /usr/share/vim/vim90/colors
 
-sudo chown root:root /usr/share/vim/vim82/colors/mart.vim
+sudo chown root:root /usr/share/vim/vim90/colors/mart.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/colors/mart.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/colors/mart.vim
 
-sudo chmod ga+r /usr/share/vim/vim82/colors/mart.vim
+sudo chmod ga+r /usr/share/vim/vim90/colors/mart.vim
 
 
 ### colors/valedisks.vim
-sudo cp /usr/local/share/valentine/diskManager/colors/valedisks.vim /usr/share/vim/vim82/colors
+sudo cp /usr/local/share/valentine/diskManager/colors/valedisks.vim /usr/share/vim/vim90/colors
 
-sudo chown root:root /usr/share/vim/vim82/colors/valedisks.vim
+sudo chown root:root /usr/share/vim/vim90/colors/valedisks.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/colors/valedisks.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/colors/valedisks.vim
 
-sudo chmod uga+r /usr/share/vim/vim82/colors/valedisks.vim
+sudo chmod uga+r /usr/share/vim/vim90/colors/valedisks.vim
 
 
 ### colors/valeparted.vim
-sudo cp /usr/local/share/valentine/diskParted/colors/valeparted.vim /usr/share/vim/vim82/colors
+sudo cp /usr/local/share/valentine/diskParted/colors/valeparted.vim /usr/share/vim/vim90/colors
 
-sudo chown root:root /usr/share/vim/vim82/colors/valeparted.vim
+sudo chown root:root /usr/share/vim/vim90/colors/valeparted.vim
 
-sudo chmod goa-rxw /usr/share/vim/vim82/colors/valeparted.vim
+sudo chmod goa-rxw /usr/share/vim/vim90/colors/valeparted.vim
 
-sudo chmod uga+r /usr/share/vim/vim82/colors/valeparted.vim
+sudo chmod uga+r /usr/share/vim/vim90/colors/valeparted.vim
 
 
 ########## disk Manager
@@ -181,12 +177,6 @@ sudo chmod o-xrw /usr/local/bin/valedisks
 sudo chmod uga+xr /usr/local/bin/valedisks
 
 
-cp -r homePart/vim/* ~/.vim
-
-sudo mkdir /root/.vim
-
-sudo cp -r homePart/vim/* /root/.vim
-
 
 ########## partizionatore (ValeParted)
 
@@ -201,8 +191,13 @@ sudo chmod o-xrw /usr/local/bin/valeparted
 sudo chmod uga+xr /usr/local/bin/valeparted
 
 
-cp -r homePart/vim/* ~/.vim
 
+### copia di homePart/vim
+cp -r homePart/vim/* /home/$curuser/.vim
+
+sudo mkdir /root/.vim
+
+sudo cp -r homePart/vim/* /root/.vim
 
 
 ########## Impostazioni di default
@@ -227,13 +222,13 @@ unzip vim-plug-master.zip -d /tmp/fullValetineUnzipPlugins
 
 cd /tmp/fullValetineUnzipPlugins
 
-sudo cp vim-plug-master/plug.vim ~/.vim/autoload
+sudo cp vim-plug-master/plug.vim /home/$curuser/.vim/autoload
 
-sudo cp vim-plug-master/doc/* ~/.vim/doc
+sudo cp vim-plug-master/doc/* /home/$curuser/.vim/doc
 
-#vim -c ':helptags ~/.vim/doc' -c :q
+#vim -c ':helptags /home/$curuser/.vim/doc' -c :q
 
-sudo mkdir ~/.vim/plugged
+sudo mkdir /home/$curuser/.vim/plugged
 
 rm -r vim-plug-master
 
@@ -285,16 +280,16 @@ cd /tmp/fullValetineUnzipPlugins/
 
 cd tagbar-master
 
-## obbligatorio in  ~/.vim/autoload
-sudo cp -r autoload/* ~/.vim/autoload
+## obbligatorio in  /home/$curuser/.vim/autoload
+sudo cp -r autoload/* /home/$curuser/.vim/autoload
 
-sudo mkdir -p ~/.vim/plugged/tagbar
+sudo mkdir -p /home/$curuser/.vim/plugged/tagbar
 
-sudo cp -r plugin ~/.vim/plugged/tagbar
+sudo cp -r plugin /home/$curuser/.vim/plugged/tagbar
 
-sudo cp -r syntax ~/.vim/plugged/tagbar
+sudo cp -r syntax /home/$curuser/.vim/plugged/tagbar
 
-sudo cp doc/* ~/.vim/plugged/tagbar/doc
+sudo cp doc/* /home/$curuser/.vim/plugged/tagbar/doc
 
 cd $posNow
 
@@ -308,17 +303,17 @@ cd /tmp/fullValetineUnzipPlugins/
 
 cd vim-tex-fold-master
 
-sudo mkdir  ~/.vim/plugged/vim-tex-fold
+sudo mkdir  /home/$curuser/.vim/plugged/vim-tex-fold
 
-sudo cp -r * ~/.vim/plugged/vim-tex-fold
+sudo cp -r * /home/$curuser/.vim/plugged/vim-tex-fold
 
 cd $posNow
 
 ######## proprietà e permessi
 
-sudo chown -R $curuser:$curuser ~/.vim
+sudo chown -R $curuser:$curuser /home/$curuser/.vim
 
-sudo chmod -R uga+xrw ~/.vim
+sudo chmod -R uga+xrw /home/$curuser/.vim
 
 sudo cp -r /home/$curuser/.vim /root
 

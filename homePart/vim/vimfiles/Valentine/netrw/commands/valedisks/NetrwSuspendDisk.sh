@@ -3,7 +3,7 @@
 ## Intro: Bash script about disk suspension {{{1
 ##          It's called by NetrwSuspendDisk.vim .
 ## Title: NetrwSuspendDisk.sh {{{1
-## Author: Mario Fantini marfant7@gmail.com https://github.com/MartDiVenus/ {{{1
+## Author: Mario Fantini ing.mariofantini@gmail.com https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2022.02.26 {{{1 
 ## Creative Commons by-nc-sa-eu

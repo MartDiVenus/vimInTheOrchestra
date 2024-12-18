@@ -5,7 +5,7 @@
 ##        I could share martalux with Vim's and other élite of administrators,
 ##        I don't share it with any user.
 ## Title: install.sh {{{1
-## Author: Mario Fantini "MartDiVenus" marfant7@gmail.com 
+## Author: Mario Fantini "MartDiVenus" ing.mariofantini@gmail.com 
 ## https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
