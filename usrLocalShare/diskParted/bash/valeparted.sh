@@ -4,7 +4,7 @@
 ##        with X session {{{1
 ## /usr/local/bin/valeparted
 ## Title: valeparted.sh {{{1
-## Author: Mario Fantini ing.mariofantini@gmail.com {{{1
+## Author: Mario Fantini marfant7@gmail.com {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
 ## Creative Commons by-nc-sa-eu
@@ -140,14 +140,40 @@ leggoBytesD=$(cat /tmp/valeparted-optionsDirD00Bytes)
 if test $leggoBytesD -gt 0
 
 then 
+
 cat  /tmp/valeparted-optionsDirD00 | sed 's/--d=//g' > /tmp/valeparted-dirName
 
-#	read -p "testing avvio loop" EnterNull
+## file iso da creare
+
+grep "\--f=" /tmp/valeparted-options > /tmp/valeparted-optionsF00
+
+stat --format %s /tmp/valeparted-optionsF00 > /tmp/valeparted-optionsF00Bytes
+
+leggoBytesF=$(cat /tmp/valeparted-optionsF00Bytes)
+
+#	read -p "testing isol --f=" EnterNull
+if test $leggoBytesF -gt 0
+
+then
+
+	cat /tmp/valeparted-optionsF00 | sed 's/--f=//g' > /tmp/valeparted-fileName
+
+#		read -p "testing isol -f" EnterNull
+
 	/usr/local/share/valentine/diskParted/bash/Dir/valepartedDir.sh
 
 	exit
 
 	break
+
+else
+/usr/local/share/valentine/diskParted/bash/Dir/valepartedDir.sh
+
+	exit
+
+	break
+fi
+
 fi
 
 grep "\--nd=" /tmp/valeparted-options > /tmp/valeparted-optionsDirNd00
@@ -159,7 +185,7 @@ leggoBytesNd=$(cat /tmp/valeparted-optionsDirNd00Bytes)
 if test $leggoBytesNd -gt 0
 
 then 
-cat  /tmp/valeparted-optionsDirNdD00 | sed 's/--nd=//g' > /tmp/valeparted-listOfDirs
+cat  /tmp/valeparted-optionsDirNd00 | sed 's/--nd=//g' > /tmp/valeparted-listOfDirs
 
 	#	read -p "testing avvio loop" EnterNull
 	/usr/local/share/valentine/diskParted/bash/Dir/valepartedDir.sh
@@ -168,6 +194,9 @@ cat  /tmp/valeparted-optionsDirNdD00 | sed 's/--nd=//g' > /tmp/valeparted-listOf
 
 	break
 fi
+
+
+
 
 grep "\-isol" /tmp/valeparted-options > /tmp/valeparted-optionsIsol00
 
@@ -589,7 +618,7 @@ Crea immagine iso da un device sorgente (CD-ROM, chiavetta, partizione hd)
 ~$> valeparted --get=/dev/sdc1 --f=/home/user/a
 
 Crea immagine iso /home/user/a.iso dalla directory del filesystem /home/mart/test2
-~$> valeparted -d/home/mart/test2 --f=/home/user/a
+~$> valeparted --d=/home/mart/test2 --f=/home/user/a
 
 Crea immagine iso /home/mart/test2.iso dalla directory del filesystem /home/mart/test2
 ~$> valeparted --d=/home/mart/test2 
@@ -637,7 +666,7 @@ Crea multipli file ISO specificati, uno per ogni riga, in
 e copia in essi i file specificati, uno per ogni riga, in 
 /home/user/test/listOfFileToCopyIntoISO.txt
 
-~$> valeparted -isol -l/home/user/test/listISO.txt --scl=/home/user/test/listOfFileToCopyIntoISO.txt
+~$> valeparted -isol --l=/home/user/test/listISO.txt --scl=/home/user/test/listOfFileToCopyIntoISO.txt
 
 
 
@@ -645,7 +674,7 @@ Apparentemente non avrebbe molto senso copiare lo stesso file in file ISO differ
 invece potrebbe rivelarsi utile nel caso in cui si volessero aggiornare i file ISO in futuro e
 ritrovarsi una base assegnata.
 
-~$> valeparted -isol -l/home/user/test/listISO.txt --sc=/home/user/test/FileToCopyIntoISO.txt
+~$> valeparted -isol --l=/home/user/test/listISO.txt --sc=/home/user/test/FileToCopyIntoISO.txt
 
 
 
@@ -661,9 +690,9 @@ Invece per creare file ISO multipli in un'unica sessione, consiglio di specifica
 
 ~$> valeparted -isor --f=/home/user/a --sc=/home/user/test/fileToCopyIntoISO.txt
 
-~$> valeparted -isor --dev=/dev/sda3 -l/home/user/test/listISO.txt
+~$> valeparted -isor --dev=/dev/sda3 --l=/home/user/test/listISO.txt
 
-~$> valeparted -isor --dev=/dev/sda3 -l/home/user/test/listISO.txt --scl=/home/user/test/listOfFileToCopyIntoISO.txt
+~$> valeparted -isor --dev=/dev/sda3 --l=/home/user/test/listISO.txt --scl=/home/user/test/listOfFileToCopyIntoISO.txt
 
 
 crea solo un disco loop
@@ -682,7 +711,7 @@ vel
 sudo umount /mnt/'folder'
 
 Copyright:
-Copyright (C) 2023.08.29 Mario Fantini (ing.mariofantini@gmail.com).
+Copyright (C) 2023.08.29 Mario Fantini (marfant7@gmail.com).
 Bash copyright applies to its Mario Fantini's pseudo options.
 GNU copyright applies to its Mario Fantini's GNU tools usage.
 And so on.
@@ -729,7 +758,7 @@ rm  /tmp/resp1FisicaOlive
 if test $leggoRespFisicaOlive -gt 0
  then
   ## Sono in una stazione live
-  ## !!!!!! Per le stazioni live non va l'opzione -l
+  ## !!!!!! Per le stazioni live non va l'azione --l
 
 findmnt -n --real -o TARGET > /tmp/real1
 
@@ -2627,7 +2656,7 @@ lsblk > /dev/null
 ### Ripristino di netrw file manager
 cp /usr/local/share/valentine/fileManager/plugin/Valentine.vim.file ~/.vim/plugin/Valentine/Valentine.vim
 
-sudo cp /usr/local/share/valentine/fileManager/autoload/netrw.vim.file /usr/share/vim/vim82/autoload/netrw.vim
+sudo cp /usr/local/share/valentine/fileManager/autoload/netrw.vim.file /usr/share/vim/vim90/autoload/netrw.vim
 
 sudo cp -r /usr/local/share/valentine/fileManager/etc/vim /etc
 
