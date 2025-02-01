@@ -2,6 +2,6 @@
 
 My walk with VIM.
 
-https://github.com/MartDiVenus/VIM/tree/Valentine.vim
+https://github.com/MartDiVenus/vimInTheOrchestra/tree/Valentine.vim
 
-https://github.com/MartDiVenus/VIM/tree/hexadecimal-Vim-writing
+https://github.com/MartDiVenus/vimInTheOrchestra/tree/hexadecimal-Vim-writing
