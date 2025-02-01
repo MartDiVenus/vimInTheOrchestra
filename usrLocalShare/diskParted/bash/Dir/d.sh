@@ -4,7 +4,7 @@
 ##        with X session {{{1
 ## /usr/local/bin/valeparted
 ## Title: valeparted.sh {{{1
-## Author: Mario Fantini ing.mariofantini@gmail.com {{{1
+## Author: Mario Fantini marfant7@gmail.com {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
 ## Creative Commons by-nc-sa-eu
@@ -32,10 +32,11 @@ curuser="$(cat /tmp/valeparted-curuser)"
 
 
 # read -p "testing device = /dev/$partizione" EnterNull
+fullName=$(cat /tmp/valentine-fullName)
 
-dirName="$(cat /tmp/valeparted-dirName)"
+dirNameIsolata="$(cat /tmp/valentine-nomeCartellaIsolata)"
 
-# read -p "testing filename = $dirName" EnterNull
+# read -p "testing filename = $dirNameIsolata" EnterNull
 
 clear 
 
@@ -134,20 +135,20 @@ echo " "
 
 sleep 0.5
 
-dirName="$(cat /tmp/valeparted-dirNameToCopy)"
+#dirNameIsolata="$(cat /tmp/valeparted-dirNameToCopy)"
 
 percorsoIsolato="$(cat /tmp/valentine-percorsoIsolato)"
 
 #read -p "mart: Ti renderò ISO la directory 
-#$dirName in
-#$dirName.iso
+#$dirNameIsolata in
+#$dirNameIsolata.iso
 #
-#Se $dirName fosse presente in una partizione non di sistema,
+#Se $dirNameIsolata fosse presente in una partizione non di sistema,
 #allora dovresti montarla (rispettando il suddetto percorso)
 #prima di procedere premendo Enter.
 #
 #montare per leggere il file ISO, eseguendo tale istanza:
-#sudo mount -o loop $dirName.iso /mnt/valepartedMnt
+#sudo mount -o loop $dirNameIsolata.iso /mnt/valepartedMnt
 #
 #smontare, eseguendo:
 #sudo umount /mnt/valepartedMnt
@@ -157,16 +158,46 @@ percorsoIsolato="$(cat /tmp/valentine-percorsoIsolato)"
 #
 #Premi Enter per continuare" EnterNull
 
-sudo chmod -R ugao+xrw $dirName
+#read -p "testing 160 d.sh
+#sudo chmod -R ugao+xrw \$fullName
 
-xorriso -as mkisofs -o $percorsoIsolato$dirName.iso $dirName
+#sudo chmod -R ugao+xrw $fullName
+
+#xorriso -outdev \$dirNameIsolata.iso -padding 0 -compliance no_emul_toc -map \$fullName / -chmod 0777 / --
+
+#xorriso -outdev $dirNameIsolata.iso -padding 0 -compliance no_emul_toc -map $fullName / -chmod 0777 / --
+#" EnterNull
+
+sudo chmod -R ugao+xrw $fullName
+
+## La sottostante istanza va bene solo per piccoli file
+#xorriso -as mkisofs -o $dirNameIsolata.iso $percorsoIsolato/$dirNameIsolata
+## Invece, la sottostante è valida anche per file grossi
+xorriso -outdev $dirNameIsolata.iso -padding 0 -compliance no_emul_toc -map $fullName / -chmod 0777 / --
+
 
 sleep 1
-sudo chown $curuser:$curuser $dirName.iso
+sudo chown $curuser:$curuser $dirNameIsolata.iso
 
-sudo chmod uga+rw $dirName.iso
+sudo chmod uga+rw $dirNameIsolata.iso
 
-rm -r /tmp/valeNetrw*
+if [ -f /tmp/valeparted-listOfDirs ]; then 
+
+echo ""
+echo ""
+echo "Hai 
+$(ls .)
+"
+
+else
+
+echo ""
+echo ""
+echo "Hai 
+$dirNameIsolata.iso"
+echo ""
+
+fi
 
 
 exit

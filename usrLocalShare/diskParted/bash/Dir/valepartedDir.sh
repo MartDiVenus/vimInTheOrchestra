@@ -4,7 +4,7 @@
 ##        with X session {{{1
 ## /usr/local/bin/valeparted
 ## Title: valeparted.sh {{{1
-## Author: Mario Fantini ing.mariofantini@gmail.com {{{1
+## Author: Mario Fantini marfant7@gmail.com {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
 ## Creative Commons by-nc-sa-eu
@@ -26,56 +26,46 @@
 
 ## Help: Vale-netrw
 
-#^^^^^^^^^^^^^ Scandaglio le opzioni per eseguire gli script giusti.
+#^^^^^^^^^^^^^ Scandaglio le azioni per eseguire gli script giusti.
 
-## opzione -f (file iso da creare)
+for azioni in {1}
+
+do
+
+## azione --f (file iso da creare)
+#
+# if A.1
 if [ -f /tmp/valeparted-fileName ]; then
 
-	## l'opzione -f combinata con le opzioni --d e --nd 
-	## mi creano un file iso nella posizione espressa da -f (il percorso prima del nome senza estensione)
-	
-	## opzione -d (file da copiare nel file ISO)
-if [ -f /tmp/valeparted-dirName ]; then 
+	## l'azione --f combinata con le azioni --d e --nd 
+	## mi creano un file iso nella posizione espressa da --f (il percorso prima del nome senza estensione)
 
-/usr/local/share/valentine/diskParted/bash/Dir/f-d.sh
-
-else
-
-	## opzione -f
-echo "Non hai espresso alcuna opzione tra -f, --d, --nd.
-Uscita forzata"
-
-exit
-
-fi
-
-
-else
-	## se non esiste  /tmp/valeparted-fileName (opzione -f) nel caso allora significa che voglio creare 
+	## se non esiste  /tmp/valeparted-fileName (azione --f) nel caso allora significa che voglio creare 
 	# il file ISO nella stessa posizione del file da copiare. Infatti in d.sh ricorro a 
 	# percorsoIsolato="$(cat /tmp/valentine-percorsoIsolato)"
+outputFile=$(cat /tmp/valeparted-fileName)
 
-	## opzione -d
-if [ -f /tmp/valeparted-dirName ]; then 
+cp /tmp/valeparted-dirName /tmp/valentine-fullName 
 
+fullName=$(cat /tmp/valeparted-dirName)
 
-	cp /tmp/valeparted-dirName /tmp/valentine-fullName 
 /usr/local/share/valentine/trattamentoCartelle.sh
 
-	dirName="$(cat /tmp/valentine-nomeCartellaIsolata)"
+dirNameIsolata="$(cat /tmp/valentine-nomeCartellaIsolata)"
 
-	echo $dirName > /tmp/valeparted-dirName
+echo $dirNameIsolata > /tmp/valeparted-dirName
 
 read -p "mart: Ti renderò ISO la directory 
-$dirName in
-$dirName.iso
+$fullName 
+in
+$outputFile.iso
 
-Se $dirName fosse presente in una partizione non di sistema,
+Se $fullName fosse presente in una partizione non di sistema,
 allora dovresti montarla (rispettando il suddetto percorso)
 prima di procedere premendo Enter.
 
 Alla fine della sessione, montare per leggere il file ISO, eseguendo tale istanza:
-sudo mount -o loop $dirName.iso /mnt/valepartedMnt
+sudo mount -o loop $outputFile.iso /mnt/valepartedMnt
 
 smontare, eseguendo:
 sudo umount /mnt/valepartedMnt
@@ -86,38 +76,43 @@ l importante è le proprietà e i permessi siano ben impostati.
 Premi Enter per continuare" EnterNull
 
 
-	/usr/local/share/valentine/diskParted/bash/Dir/d.sh
+/usr/local/share/valentine/diskParted/bash/Dir/f-d.sh
 
-else
+
+exit
+
+break
+
+
+fi
+
+
 	## se non esiste /tmp/valeparted-fileName (-f), e non esiste /tmp/valeparted-dirName (--d)
        # allora significa che voglio creare il file ISO nella stessa posizione di ogni file da copiare
        # espresso nella lista.
 
-       ## opzione -nd
+       ## azione --nd
+
+# if A.1.1
 if [ -f /tmp/valeparted-listOfDirs ]; then 
 
-		mkdir /tmp/valeparted-listOfDirsSplit
+	mkdir /tmp/valeparted-listOfDirsSplit
 
-	split -l1 /tmp/valeparted-listOfDirs /tmp/valeparted-listOfDirsSplit/
+	leggoFileLista=$(cat /tmp/valeparted-listOfDirs)
+
+	split -l1 $leggoFileLista /tmp/valeparted-listOfDirsSplit/
 
 
 	for c in $(ls /tmp/valeparted-listOfDirsSplit)
 
 	do 
 
-		dirName="$(cat /tmp/valeparted-listOfDirsSplit/$c)"
+		dirNameFull="$(cat /tmp/valeparted-listOfDirsSplit/$c)"
 
-		echo $dirName > /tmp/valeparted-dirName
-
-		cp /tmp/valeparted-dirName /tmp/valentine-fullName 
+		echo $dirNameFull > /tmp/valentine-fullName 
 	
 /usr/local/share/valentine/trattamentoCartelle.sh
 
-	dirName="$(cat /tmp/valentine-nomeCartellaIsolata)"
-
-	echo $dirName > /tmp/valeparted-dirName
-
-	
 ## Attenzione, in tale caso, non ho bisogno di nd, ho il ciclo che mi rende d.sh in nd.sh;
 
 #/usr/local/share/valentine/diskParted/bash/Dir/nd.sh
@@ -125,16 +120,19 @@ if [ -f /tmp/valeparted-listOfDirs ]; then
 /usr/local/share/valentine/diskParted/bash/Dir/d.sh
 done
 
-else
-	echo "Non hai fornito né l opzione -f, né l'opzione --d, né l'opzione --nd.
-Chiusura forzata."
-
 exit
 
-fi
+break
 
 fi
 
+
+/usr/local/share/valentine/diskParted/bash/Dir/d.sh
+
+
+done
+
+# A.1
 
 exit
 

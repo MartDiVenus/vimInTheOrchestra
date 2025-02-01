@@ -4,7 +4,7 @@
 ##        with X session {{{1
 ## /usr/local/bin/valeparted
 ## Title: valeparted.sh {{{1
-## Author: Mario Fantini ing.mariofantini@gmail.com {{{1
+## Author: Mario Fantini marfant7@gmail.com {{{1
 
 ## Copyright (C) 2022.02.27 {{{1 
 ## Creative Commons by-nc-sa-eu
@@ -33,7 +33,7 @@ curuser="$(cat /tmp/valeparted-curuser)"
 
 # read -p "testing device = /dev/$partizione" EnterNull
 
-fileName="$(cat /tmp/valeparted-fileName)"
+outputFile="$(cat /tmp/valeparted-fileName)"
 
 # read -p "testing filename = $fileName" EnterNull
 
@@ -134,20 +134,21 @@ echo " "
 
 sleep 0.5
 
-dirName="$(cat /tmp/valeparted-dirName)"
 
-read -p "mart: Ti renderò ISO la directory 
-$dirName in
-$fileName.iso
+fullName="$(cat /tmp/valentine-fullName)"
 
-Se $dirName fosse presente in una partizione non di sistema,
+read -p "mart: Ripeto --- Ti renderò ISO la directory 
+$fullName in
+$outputFile.iso
+
+Se $fullName fosse presente in una partizione non di sistema,
 allora dovresti montarla (rispettando il suddetto percorso)
 prima di procedere premendo Enter.
 
 
 Alla fine della sessione, montare per leggere il file ISO,
 eseguendo tale istanza:
-sudo mount -o loop $fileName.iso /mnt/valepartedMnt
+sudo mount -o loop $outputFile.iso /mnt/valepartedMnt
 
 smontare, eseguendo:
 sudo umount /mnt/valepartedMnt
@@ -157,17 +158,26 @@ l importante è le proprietà e i permessi siano ben impostati.
 
 Premi Enter per continuare" EnterNull
 
-sudo chmod -R ugao+xrw $dirName
+sudo chmod -R ugao+xrw $fullName
 
-xorriso -as mkisofs -o $percorsoIsolato$dirName.iso $dirName
+#read -p "testing 163 f-d.sh
+#xorriso -as mkisofs -o \$outputFile.iso \$fullName
+
+#xorriso -as mkisofs -o $outputFile.iso $fullName
+
+#" EnterNull
+#
+## La sottostante istanza va bene solo per piccoli file
+#xorriso -as mkisofs -o $outputFile.iso $fullName
+
+## Invece, la sottostante è valida anche per file grossi
+xorriso -outdev $outputFile.iso -padding 0 -compliance no_emul_toc -map $fullName / -chmod 0777 / --
 
 sleep 1
-sudo chown $curuser:$curuser $fileName.iso
 
-sudo chmod uga+rw $fileName.iso
+sudo chown $curuser:$curuser $outputFile.iso
 
-rm -r /tmp/valeNetrw*
-
+sudo chmod uga+rw $outputFile.iso
 
 exit
 
