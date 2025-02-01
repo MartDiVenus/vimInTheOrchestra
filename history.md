@@ -250,4 +250,13 @@ _______________
 
 usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
 
+
+_______________
+	
+	v4.0.2  Feb 01, 2025
+
+usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
+
+usrLocalShare/diskParted/bash/Dir/* have been corrected.
+
 	
