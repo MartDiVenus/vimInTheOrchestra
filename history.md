@@ -254,6 +254,9 @@ usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
 _______________
 	
 	v4.0.2  Feb 01, 2025
+usrLocalShare corrected, adding \
+usrLocalShare/trattamentoFiles.sh \
+usrLocalShare/trattamentoCartelle.sh
 
 usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
 
