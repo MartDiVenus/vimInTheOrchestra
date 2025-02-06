@@ -4,7 +4,7 @@ Version 2.1.1.   Last change: 2023 jul 08
             ------------------------------------------------
             VALENTINE REFERENCE MANUAL      by Mario Fantini
             ------------------------------------------------
-Author:  Mario Fantini "MartDiVenus" <ing.mariofantini@gmail.com> 
+Author:  Mario Fantini "MartDiVenus" <marfant7@gmail.com> 
          https://github.com/MartDiVenus/
 
 Copyright: Mario Fantini's copyright: Creative Commons by-nc-sa-eu.
@@ -716,6 +716,8 @@ fu: make bookmarks.
         EDIT BOOKMARKS LIST
 fb: edit bookmarks.
         Means: Edit bookmarks list, remember to save the file before to quit.
+If you insert hidden folders, you'll have an unwanted translation in numerical
+order; so don't specify hidden folders.
      
                                         *Vale-netrw_flush_bookmarks* {{{4
         FLUSH BOOKMARKS LIST
@@ -1022,7 +1024,7 @@ _______________
 	
 	v4.0.0  Aug 31, 2024
 
-Various improvements and corrections; new features in ValeParted.
+Various improvements and corrections. New features in ValeParted.
 
 =============================================================================
 8. Todo					*Vale-todo* {{{1
