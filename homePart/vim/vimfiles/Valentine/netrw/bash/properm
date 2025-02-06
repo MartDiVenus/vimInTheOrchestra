@@ -3,7 +3,7 @@
 
 ## Intro: Bash script invoked by [bm]
 ## Title: properd {{{1
-## Author: Mario Fantini ing.mariofantini@gmail.com https://github.com/MartDiVenus/ {{{1
+## Author: Mario Fantini marfant7@gmail.com https://github.com/MartDiVenus/ {{{1
 
 ## Copyright (C) 2021.10.15 {{{1 
 # Creative Commons by-nc-sa-eu
@@ -23,7 +23,6 @@
 # Aka see <https://www.gnu.org/licenses/>.
 
 ## Help: Vale-netrw_bm
-ù
 
 sudo rm -fr /tmp/splitValeNetrw-SMarked
 
