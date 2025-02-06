@@ -262,4 +262,16 @@ usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
 
 usrLocalShare/diskParted/bash/Dir/* have been corrected.
 
+
+_______________
+	
+	v4.1.0  Feb 06, 2025
+
+usrLocalShare/diskParted/bash/valeparted.sh help section has been corrected.
+
+homePart/vim/vimfiles/Valentine/netrw/bash/properm ininfluent mistake has been corrected.
+
+homePart/vim/doc/Valentine.txt bookmarks section has been improved.
+
+
 	
