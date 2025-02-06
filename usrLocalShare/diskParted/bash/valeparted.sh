@@ -606,8 +606,11 @@ or, directly:
 echo " "
 echo " "
 echo "Create loop device (loop partition)					-loop"
+echo ""
+echo ""
+echo ""
 echo "Usage:
-valeparted -option -f<Value>"
+valeparted -option --action"
 echo " "
 echo "e.g.:
 
@@ -695,16 +698,16 @@ Invece per creare file ISO multipli in un'unica sessione, consiglio di specifica
 ~$> valeparted -isor --dev=/dev/sda3 --l=/home/user/test/listISO.txt --scl=/home/user/test/listOfFileToCopyIntoISO.txt
 
 
-crea solo un disco loop
+Make a loop device
 ~$> valeparted -loop
 
 
-Montaggio:
-sudo mount 'discoLoopCreato' /mnt/valepartedMnt o qualsiasi altra cartella di /mnt,
-sempre che sia ben impostata con le proprieàt e i permessi
+Mounting:
+sudo mount 'loop device made' /mnt/valepartedMnt or any folder in /mnt,
+set by right ownership and permissions.
 
-Smontaggio:
-sudo umount 'discoLoopCreato'
+Unmounting:
+sudo umount 'loop device made'
 vel
 sudo umount /mnt/valepartedMnt
 vel
