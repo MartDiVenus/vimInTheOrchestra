@@ -1,6 +1,6 @@
 # Intro
 
-Valentine's art into Vim's art.
+Vim file manager, Vim disk manager, Vim partitions table manipulation; VIM hexadecimal-colours.; and other utilities in different languages.
 
 # Installing
 
