@@ -274,4 +274,8 @@ homePart/vim/vimfiles/Valentine/netrw/bash/properm ininfluent mistake has been c
 homePart/vim/doc/Valentine.txt bookmarks section has been improved.
 
 
+_______________
+	
+	v4.1.1  Mar 07, 2025
+usrLocalShare/diskManager/bash/valedisks.sh has been corrected.
 	
