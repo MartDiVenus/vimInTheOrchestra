@@ -1,7 +1,7 @@
 " netrwFileHandlers: contains various extension-based file handlers for
 "                    netrw's browsers' x command ("eXecute launcher")
 " Author:	Charles E. Campbell, forked by Mario Fantini
-"               (ing.mariofantini@gmail.com)
+"               (marfant7@gmail.com)
 " Date:		Sep 18, 2020
 " Version:	11
 " Copyright:    Copyright (C) 1999-2012 Charles E. Campbell {{{1
