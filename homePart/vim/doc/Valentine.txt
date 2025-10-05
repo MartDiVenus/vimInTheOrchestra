@@ -49,7 +49,7 @@ Copyright: Mario Fantini's copyright: Creative Commons by-nc-sa-eu.
 		Inverse fd* selection [_fd].....................|Vale-netrw__fd|
 		Print current dir [h].............................|Vale-netrw_h|
 		Execute script/program for fm* [bm]..............|Vale-netrw_bm|
-		Deleting and corruption for fm* [bm].............|Vale-netrw_bd|
+		Deleting and corruption for fm* [bd].............|Vale-netrw_bd|
 		List fm* [flm]..................................|Vale-netrw_flm|
 		List !fd/fd* [fld]..............................|Vale-netrw_fld|
 		fm* list flushing [fsm].........................|Vale-netrw_fsm|
@@ -77,7 +77,6 @@ Copyright: Mario Fantini's copyright: Creative Commons by-nc-sa-eu.
                 Umount partitions................................|Vale-netrw_mn|
                 Suspend disks....................................|Vale-netrw_bu|
                 Eject-Turn off disks.............................|Vale-netrw_bo|
-      ValeParted...............................................|Vale-valeparted|
       Vim Driver...............................................|Vale-vim_driver|
 	 Starting with Vim Driver...........................|Vale-vdriver_start|
 7.  History.......................................................|Vale-history|
@@ -397,10 +396,6 @@ Features:
 	Vale-netrw  has  some  additional, useful in my opinion, functionali-
         ties.
 
-	For disk partition table manipulation.
-	Using   ValeParted  like   Disk  Manager,  but  without  mounting  in 
-        read-write. It is invoked before fdisk manipulation starts.
-
 
 Reasons To Remark:
 Remarking, I have a variegated control and a complete  control	of files/dirs
@@ -413,13 +408,6 @@ target for an action.
         ~$ valedisks
         or
         ~$ /usr/local/bin/valedisks
-
-
-		To start ValeParted 
-                (netrw/fdisk disk partition table manipulation), execute:
-        ~$ valeparted
-        or
-        ~$ /usr/local/bin/valeparted
 
 
 Warnings:                               *Vale-netrw_warnings* {{{3     
@@ -864,24 +852,6 @@ ba: Turn off all disks softly, except:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-					*Vale-valeparted* {{{2
-        DISK PARTITION TABLE MANIPULATION VALEPARTED
-An  essential  orderly  disk  partition  table  manipulation,  for ext3, ext4,
-fat16, fat32, xfs filesystems.
-	To execute ValeParted
-~$ valeparted
-
-There could be some matters with fdisk country language and valeparted codex;
-valeparted codex is built according to english and italian languages, because 
-sometimes  fdisk  communicates  by english language, and  at  other times  by 
-italian language. I should install a debian distro from an english mirror, or
-you should translate valeparted-codex's <<Nuova partizione>>.
-
-I hope to create a latin dictionary for computer science, so we  could commu-
-nicate by the same language; latin  language  is the best "mathematical" lan-
-guage of all times.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 6.3 VALENTINE VIM DRIVER		*Vale-vim_driver* {{{2
 
 A Vim walk.
@@ -1025,6 +995,51 @@ _______________
 	v4.0.0  Aug 31, 2024
 
 Various improvements and corrections. New features in ValeParted.
+
+
+_______________
+	
+	v4.0.1  Nov 04, 2024
+
+usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
+
+
+_______________
+	
+	v4.0.2  Feb 01, 2025
+usrLocalShare corrected, adding \
+usrLocalShare/trattamentoFiles.sh \
+usrLocalShare/trattamentoCartelle.sh
+
+usrLocalShare/diskParted/bash/valeparted.sh has been corrected.
+
+usrLocalShare/diskParted/bash/Dir/* have been corrected.
+
+
+_______________
+	
+	v4.1.0  Feb 06, 2025
+
+usrLocalShare/diskParted/bash/valeparted.sh help section has been corrected.
+
+homePart/vim/vimfiles/Valentine/netrw/bash/properm ininfluent mistake has been corrected.
+
+homePart/vim/doc/Valentine.txt bookmarks section has been improved.
+
+
+_______________
+	
+	v4.1.1  Mar 07, 2025
+usrLocalShare/diskManager/bash/valedisks.sh has been corrected.
+	
+
+_______________
+	
+	v4.1.2  Sep 12, 2025
+usrLocalShare/diskParted has been removed.
+doc/Valentine.txt has been corrected.
+	
+
 
 =============================================================================
 8. Todo					*Vale-todo* {{{1
