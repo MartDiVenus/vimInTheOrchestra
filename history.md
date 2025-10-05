@@ -279,3 +279,10 @@ _______________
 	v4.1.1  Mar 07, 2025
 usrLocalShare/diskManager/bash/valedisks.sh has been corrected.
 	
+
+_______________
+	
+	v4.1.2  Sep 12, 2025
+usrLocalShare/diskParted has been removed.
+doc/Valentine.txt has been corrected.
+	
