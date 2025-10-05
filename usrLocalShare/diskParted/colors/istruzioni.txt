@@ -1,6 +1,0 @@
-all'installazione di fullValentine
-
-/usr/share/vim/vim82/colors/valeparted.vim
-
-
-sudo chmod uga+r /usr/share/vim/vim82/colors/valeparted.vim
